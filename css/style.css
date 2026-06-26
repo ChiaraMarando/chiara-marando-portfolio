@@ -1,0 +1,499 @@
+/* ==========================================================================
+   1. RESET GLOBALE & IMPOSTAZIONI BASE
+   ========================================================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-light);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   2. VARIABILI DEL BRAND (Colori e Font)
+   ========================================================================== */
+   
+:root {
+  --bg-main: #1e5b62;
+  --bg-dark: #143c41;
+  --accent: #17aca2;
+  --text-light: #ffffff;
+  --text-muted: #ddf5f3;
+  --coming-soon: #68cac4;
+}
+
+/* ==========================================================================
+   3. NAVBAR & NAVIGAZIONE (Stile Base / Mobile)
+   ========================================================================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 5px 14px 5px rgba(0,0,0,0.22); 
+  box-shadow: 0px 5px 14px 5px rgba(0,0,0,0.22);
+}
+
+.navbar .logo img {
+  height: 50px;
+  width: auto;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 2001;
+}
+
+.mobile-menu-logo {
+  display: none;
+  margin-bottom: 20px; /* Spazio tra il logo e la prima voce 'HOME' */
+}
+
+.mobile-menu-logo img {
+  height: 80px; /* Lo facciamo leggermente più grande visto che siamo a schermo intero */
+  width: auto;
+}
+
+.nav-links.active .mobile-menu-logo {
+  display: block;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links a {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background-color: var(--bg-dark);
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.nav-links.active a {
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27); 
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27);
+}
+
+.nav-links.active a:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   HERO 
+   ========================================================================== */
+
+.hero-section {
+  margin-top: 150px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 50px;
+  gap: 50px;
+}
+
+.hero-container .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container .logo-container h1, h2 {
+  font-weight: 400;
+}
+
+.hero-container .info-generali-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container .info-generali-container p {
+  margin-bottom: 30px;
+}
+
+.hero-container .info-generali-container a {
+  display: block;
+  text-align: center;
+  background-color: var(--accent);
+  width: 100%;
+  max-width: 280px;
+  margin: 15px auto ;
+  padding: 10px;
+  border-radius: 100px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27); 
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27);
+}
+
+.hero-container .info-generali-container a:hover {
+  transform: translateY(-1px); 
+  filter: brightness(1.1);
+}
+
+.hero-container .info-generali-container p {
+  text-align: center;
+}
+
+.hero-container .divisore {
+  display: none;
+}
+
+/* ==========================================================================
+   PORTFOLIO
+   ========================================================================== */
+
+.portfolio-section {
+  margin: 80px 50px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-container .portfolio-testo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-container .portfolio-testo p {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.portfolio-container .portfolio-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card-container .portfolio-card {
+  background-color: var(--bg-dark);
+  width: 350px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27); 
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27);
+}
+
+.portfolio-card-container .portfolio-card h3 {
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+}
+
+.portfolio-card-container .portfolio-card img {
+  width: 100%;
+}
+
+.portfolio-card-container .portfolio-card a {
+  display: block;
+  text-align: center;
+  background-color: var(--accent);
+  width: 80%;
+  margin: 15px auto ;
+  padding: 10px;
+  border-radius: 100px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27); 
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27);
+}
+
+.portfolio-card-container .portfolio-card a:hover {
+  transform: translateY(-1px); 
+  filter: brightness(1.1);
+}
+
+.portfolio-card-container .portfolio-card .presto-disponibile {
+  background-color: var(--coming-soon);
+}
+
+.form-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    display: none; /* Nascosto di default */
+}
+
+/* Quando JS aggiunge la classe success o error, il blocco appare */
+.form-status.success {
+    display: block;
+    background-color: rgba(23, 172, 162, 0.2); /* Sfondo turchese brand opaco */
+    color: #ffffff;
+    border: 1px solid var(--accent);
+}
+
+.form-status.error {
+    display: block;
+    background-color: rgba(217, 83, 79, 0.2); /* Sfondo rosso opaco */
+    color: #ff9494;
+    border: 1px solid #d9534f;
+}
+
+.contatti-section {
+  margin: 0 50px;
+}
+
+.contatti-testo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.contatti-testo-container h2 {
+  margin-bottom: 20px;
+}
+
+.contatti-testo-container p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.contatti-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contatti-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.contatti-diretti-container h3 {
+  margin-bottom: 40px;
+}
+
+.contatti-container a {
+  margin-bottom: 15px;
+}
+
+.contatti-container .contatti-diretti-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contatto {
+  margin-top: 50px;
+}
+
+.form-group input, textarea {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: var(--accent);
+  border: none;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27); 
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27);
+}
+
+.form-group input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+  padding-left: 5px;
+}
+
+.form-group textarea {
+  height: 100px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 5px;
+}
+
+.contact-form .btn-submit {
+  border: none;
+  padding: 10px 15px;
+  background-color: var(--accent);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27); 
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.27);
+} 
+
+.contact-form .btn-submit {
+  display: block;
+  margin-left: auto; 
+  margin-right: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;   
+}
+
+.contact-form .btn-submit:hover {
+  transform: translateY(-1px); 
+  filter: brightness(1.1);  
+}
+
+.footer-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  padding-bottom: 50px;
+}
+
+.footer-container img {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  margin-bottom: 8px;
+}
+
+.footer-container .name {
+  font-size: 1.2rem;
+}
+
+.footer-container .web-developer {
+  margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Desktop)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+  .navbar .logo img {
+    height: 50px;
+    padding-left: 40px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+    gap: 30px;
+    border-bottom: none;
+    padding-right: 30px;
+  }
+
+  .nav-links a {
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  .hero-container {
+    flex-direction: row;
+    margin: 0 150px;
+  }
+
+  .hero-container .divisore {
+    display: block;
+    width: 1px;
+    height: 300px;
+    background-color: var(--text-muted);
+  }
+
+  .hero-container .logo-container {
+    width: 45%;
+  }
+
+  .hero-container .info-generali-container {
+    width: 45%;
+  }
+
+  .portfolio-section {
+  margin: 80px 200px;
+  }
+
+  .portfolio-container .portfolio-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .contatti-section {
+    margin: 0 150px;
+  }
+
+  .contatti-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contatti-section .divisore {
+    width: 1px;
+    height: 300px;
+    background-color: var(--text-muted);
+    margin: 0 80px;
+  }
+
+}
