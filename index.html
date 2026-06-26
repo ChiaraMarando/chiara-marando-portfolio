@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiara Marando | Web Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Sono Chiara Marando, Web Developer specializzata nella creazione di siti web unici, performanti e curati nei minimi dettagli. Esplora il mio portfolio."
+    />
+    <meta
+      name="keywords"
+      content="Chiara Marando, web developer, sviluppo siti web, portfolio, freelancer, HTML, CSS, JavaScript"
+    />
+    <meta name="author" content="Chiara Marando" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.chiaramarando.dev/" />
+    <meta
+      property="og:title"
+      content="Chiara Marando | Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Idee uniche meritano codice su misura. Guarda i miei progetti web."
+    />
+    <meta
+      property="og:image"
+      content="https://www.chiaramarando.dev/images/logo-meta.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "LbqkEl2PXIfVYGImW",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="images/Logo CM - Bianco - No scritta.svg"
+            alt="Chiara Marando Logo"
+          />
+        </div>
+
+        <button class="menu-toggle" aria-label="Apri menu">
+          <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255)"></i>
+        </button>
+
+        <ul class="nav-links">
+          <li class="mobile-menu-logo">
+            <img
+              src="images/Logo CM - Bianco - No scritta.svg"
+              alt="Chiara Marando Logo"
+            />
+          </li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#contatti">CONTATTI</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-section section">
+        <div class="hero-container">
+          <div class="logo-container">
+            <img
+              src="images/Logo CM - Bianco - No scritta.svg"
+              alt="Chiara Marando Logo"
+            />
+            <h1>chiara marando</h1>
+            <h2>web developer</h2>
+          </div>
+          <div class="divisore"></div>
+          <div class="info-generali-container">
+            <p>
+              Benvenuti nel mio spazio digitale, dove il codice diventa design
+            </p>
+            <a href="#portfolio">GUARDA I MIEI PROGETTI</a>
+            <a href="#contatti">CONTATTAMI</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio-section section">
+        <div class="portfolio-container">
+          <div class="portfolio-testo">
+            <h2>PORTFOLIO</h2>
+            <p>
+              Idee uniche meritano codice su misura. Qui trovi una selezione di
+              progetti web progettati da zero, dove la pulizia della struttura
+              incontra un'esperienza utente curata in ogni singolo pixel.
+            </p>
+          </div>
+          <div class="portfolio-card-container">
+            <div class="portfolio-card">
+              <h3>
+                SITO VETRINA <br />
+                (FUTURO E-COMMERCE)
+              </h3>
+              <img
+                src="images/sito franchetti.png"
+                alt="Immagine sito web franchetti home to live"
+              />
+              <a class="presto-disponibile" href="">PRESTO DISPONIBILE</a>
+            </div>
+            <div class="portfolio-card">
+              <h3>SITO VETRINA - NEGOZIO TENDE E TAPPETI</h3>
+              <img
+                src="images/sito vetrina femia.png"
+                alt="Immagine sito web femia tende e tappeti"
+              />
+              <a target="_blank" href="https://www.femiatendetappeti.it/"
+                >VISITA IL SITO</a
+              >
+            </div>
+            <div class="portfolio-card">
+              <h3>SITO VETRINA E CONTATTI - PSICOTERAPEUTA</h3>
+              <img src="images/sito psicoterapeuta.png" alt="" />
+              <a class="presto-disponibile" href="">PRESTO DISPONIBILE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contatti" class="contatti-section section">
+        <div class="contatti-testo-container">
+          <h2>HAI UN'IDEA DA SVILUPPARE?</h2>
+          <p>Rendiamola reale.</p>
+          <p>
+            Se cerchi un sito web unico, performante e curato nei minimi
+            dettagli, parliamone.
+          </p>
+        </div>
+        <div class="contatti-container">
+          <div class="contatti-diretti-container">
+            <h3>CONTATTI</h3>
+            <a href="tel:+393890983327"
+              ><i
+                class="fa-brands fa-whatsapp"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+              3890983327</a
+            >
+            <a href="mailto:chiaramarando@hotmail.com"
+              ><i
+                class="fa-regular fa-envelope"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+              chiaramarando@hotmail.com</a
+            >
+            <a href="www.linkedin.com/in/chiara-marando-632000347"
+              ><i
+                class="fa-brands fa-linkedin"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+              Chiara Marando</a
+            >
+          </div>
+          <div class="divisore"></div>
+          <div class="form-contatto">
+            <h3>SCRIVIMI UN MESSAGGIO</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nome e Cognome / Azienda</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Inserisci il tuo nome"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="nome@esempio.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Oggetto</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Qual è il motivo del messaggio?"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Messaggio</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Scrivi qui il tuo messaggio..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">INVIA</button>
+
+              <!-- Questo div servirà per mostrare i messaggi di successo o errore -->
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <img
+          src="images/Logo CM - Bianco - No scritta.svg"
+          alt="Chiara Marando Logo"
+        />
+        <p class="name">chiara marando</p>
+        <p class="web-developer">web developer</p>
+        <p>&copy; 2026 Chiara Marando. All rights reserved.</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/a635616d96.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
